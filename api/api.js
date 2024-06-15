@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const dateObj = new Date(date + 'T' + time);
         const dayOfWeek = dateObj.getDay(); // 0 para domingo, 1 para lunes, etc.
         let hour = dateObj.getHours();
-        let minute = dateObj.getMinutes();
+        const minute = dateObj.getMinutes();
         let period = 'AM'; // Inicialmente asumimos AM
     
         // Convertir a formato de 12 horas
@@ -93,21 +93,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     
         // Formatear los minutos para asegurar que tenga dos dígitos
-        minute = minute < 10 ? '0' + minute : minute;
+        const formattedMinute = minute < 10 ? '0' + minute : minute;
     
-        const formattedTime = `${hour}:${minute} ${period}`;
+        const formattedTime = `${hour}:${formattedMinute} ${period}`;
     
         if (consultorio === 'COCEN') {
             // Rango para COCEN: Lunes, Martes, Miércoles, Viernes de 3 pm a 5 pm
             if ((dayOfWeek === 1 || dayOfWeek === 2 || dayOfWeek === 3 || dayOfWeek === 5) &&
-                (hour >= 3 && hour < 5 && period === 'PM')) {
+                (period === 'PM' && hour >= 3 && hour < 5)) {
                 return true;
             }
         } else if (consultorio === 'Siglo 21') {
             // Rango para Siglo 21: Lunes a Viernes de 9 am a 1 pm
-            if ((dayOfWeek >= 1 && dayOfWeek <= 5) &&
-                (hour >= 9 && hour < 1 && period === 'PM' || hour === 12 && period === 'PM')) {
-                return true;
+            if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+                // Convertir hora a formato 24 horas para comparación
+                let hour24 = hour;
+                if (period === 'PM' && hour !== 12) {
+                    hour24 += 12;
+                } else if (period === 'AM' && hour === 12) {
+                    hour24 = 0;
+                }
+    
+                // Verifica si la hora está dentro del rango de 9 am a 1 pm (13:00)
+                if (hour24 >= 9 && hour24 < 13) {
+                    return true;
+                }
             }
         }
     
