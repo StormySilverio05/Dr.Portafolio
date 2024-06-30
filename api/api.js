@@ -35,22 +35,27 @@ document.addEventListener('DOMContentLoaded', function () {
             time: time
         };
 
-        const urlencoded = new URLSearchParams();
+        // const urlencoded = new URLSearchParams();
 
         const requestOptions = {
             method: "POST",
-            maxBodyLength: Infinity,
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'HJDUYTRGBBDGF55DSDEXCJ'
 
             },
-            body: JSON.stringify(data), urlencoded
+            body: JSON.stringify(data)
+
+
         };
 
-        fetch("http://3.231.147.13:4003/enviar-whatsapp-mensaje?celular=18496376298&mensaje=*Nombre del tutor*: "
+        console.log(data);
+        
+        fetch ("https://api-bot-ws-6f4b64da1005.herokuapp.com/send-message?phone=18496376298&mensaje=*Nombre del tutor*: "
             + tutorName + "%0ANombre del paciente: " + clientName + "%0ATelefono: " + cellphone + "%0AConsultorio:" + consultorio + "%0AServicio: "
-            + service + "%0AFecha: " + date + "%0AHora: " + time, requestOptions)
+            + service + "%0AFecha: " + date + "%0AHora: " + time, requestOptions, {
+                credentials: "omit"
+            })
+
             .then((response) => {
                 if (response.status === 200) {
                     alert("Mensaje enviado con éxito");
@@ -73,14 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const phoneRegex = /^\d{10}$/; // Expresión regular para un número de teléfono de 10 dígitos
         return phoneRegex.test(phone);
     }
-    
+
+
     function validateDateTimeRange(date, time, consultorio) {
         const dateObj = new Date(date + 'T' + time);
         const dayOfWeek = dateObj.getDay(); // 0 para domingo, 1 para lunes, etc.
         let hour = dateObj.getHours();
         const minute = dateObj.getMinutes();
         let period = 'AM'; // Inicialmente asumimos AM
-    
+
         // Convertir a formato de 12 horas
         if (hour >= 12) {
             period = 'PM';
@@ -91,12 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hour === 0) {
             hour = 12; // La medianoche (0 horas) debe ser 12 AM
         }
-    
+
         // Formatear los minutos para asegurar que tenga dos dígitos
         const formattedMinute = minute < 10 ? '0' + minute : minute;
-    
+
         const formattedTime = `${hour}:${formattedMinute} ${period}`;
-    
+
         if (consultorio === 'COCEN') {
             // Rango para COCEN: Lunes, Martes, Miércoles, Viernes de 3 pm a 5 pm
             if ((dayOfWeek === 1 || dayOfWeek === 2 || dayOfWeek === 3 || dayOfWeek === 5) &&
@@ -113,14 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (period === 'AM' && hour === 12) {
                     hour24 = 0;
                 }
-    
+
                 // Verifica si la hora está dentro del rango de 9 am a 1 pm (13:00)
                 if (hour24 >= 9 && hour24 < 13) {
                     return true;
                 }
             }
         }
-    
+
         return false;
     }
 
