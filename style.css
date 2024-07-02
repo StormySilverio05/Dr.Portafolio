@@ -51,21 +51,12 @@ header {
   opacity: 0.6;
 }
 
-.menu button{
-  margin-top: -30px;
-  padding: 14px 70px;
-  border: none;
-  /* border-radius: 8px; */
-  background: #af9ed8;
-  color: white;
-  font-weight: lighter;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background, color, 300ms;
-}
 
-.btn__header-consultas,
-.btn__register-cover {
+
+
+
+.btn__header-consultas
+{
   padding: 14px 50px;
   border: none;
   background: #af9ed8;
@@ -81,8 +72,8 @@ header {
   display: none;
 }
 
-.btn__header-consultas:hover,
-.btn__register-cover:hover {
+.btn__header-consultas:hover
+{
   background: #8bd3dc;
   color: #fff;
 }
