@@ -14,6 +14,50 @@ body {
 header {
   height: 100px;
 }
+.Home::after{
+  content: "";
+  width: 20%;
+  height: 10%;
+  background-color:green;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.Home:hover::after{
+  width: 100%;
+}
+
+.Services::after{
+  content: "";
+  width: 20%;
+  height: 10%;
+  background-color:blue;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.Services:hover::after{
+  width: 100%;
+}
+.Contacts::after{
+  content: "";
+  width: 20%;
+  height: 10%;
+  background-color:red;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.Contacts:hover::after{
+  width: 100%;
+}
+
 
 .container__header {
   max-width: 1210px;
@@ -32,11 +76,14 @@ header {
 
 .menu nav ul {
   display: flex;
+  gap: 3px;
+  
 }
 
 .menu nav ul li {
   list-style: none;
   padding: 0px 30px;
+  position: relative;
 }
 
 .menu nav ul li a {
@@ -65,7 +112,31 @@ main {
 .cover {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 200px;
+  
+}
+
+.DRImage{
+ z-index: 100px;
+  float: right;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: Dr;
+  animation-direction: alternate-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes Dr {
+  from{
+    margin-bottom: 500px;
+  }
+  to{
+    margin-top: -200px;
+  }
+}
+.BackDr{
+  overflow: visible;
 }
 
 .text_informacion {
@@ -87,15 +158,19 @@ main {
   color: #878787;
   max-width: 500px;
 }
-
-.media__cover {
-  width: 90%;
+.media_cover{
+  position: relative;
+  transition: all 1s ease;
 }
 
+
+
+
 .media_cover img {
-  width: 110%;
+  max-width: 100%;
   margin-top: -50px;
-  margin-right: -500px;
+  margin-right: -100px;
+  
 }
 
 .Text-cover {
@@ -116,7 +191,8 @@ main {
 
 .main2 {
   background-color: #CBD7CB;
-  height: calc(210vh);
+  padding-bottom: 50px;
+  height: calc(100%);
 }
 
 .conter-servios {
@@ -124,7 +200,9 @@ main {
   margin-left: 150px;
 }
 
-
+.Servicios3{
+  position: relative;
+}
 
 .Servicios2 {
   margin-top: 40px;
@@ -133,6 +211,7 @@ main {
   border-radius: 0px 0px 0px 750px;
   justify-content: space-between;
   gap: 20px;
+  position: relative;
   display: flex;
   height: calc(205vh);
 }
@@ -153,7 +232,132 @@ main {
   display: flex;
   gap: 50px;
   margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
 
+.capsuleone{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  right: 0%;
+  border-radius: 20px;
+  left: 0%;
+  cursor: pointer;
+  top: 0%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  bottom: 0%;
+  opacity: 0%;
+}
+.capsuleone img{
+    max-width: 15rem;
+    margin: 50px;
+}
+.card-servicios1:hover .capsuleone{
+  opacity: 60%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+}
+.capsuletwo{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  right: 0%;
+  border-radius: 20px;
+  left: 0%;
+  cursor: pointer;
+  top: 0%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  bottom: 0%;
+  opacity: 0%;
+}
+.capsuletwo img{
+  max-width: 15rem;
+  margin: 50px;
+}
+.card-servicios2:hover .capsuletwo{
+opacity: 60%;
+transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+cursor: pointer;
+}
+
+.capsulethree{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  right: 0%;
+  border-radius: 20px;
+  left: 0%;
+  cursor: pointer;
+  top: 0%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  bottom: 0%;
+  opacity: 0%;
+}
+.capsulethree img{
+    max-width: 15rem;
+    margin: 50px;
+}
+.card-servicios3:hover .capsulethree{
+  opacity: 60%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+}
+
+.capsulefour{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  right: 0%;
+  border-radius: 20px;
+  left: 0%;
+  cursor: pointer;
+  top: 0%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  bottom: 0%;
+  opacity: 0%;
+}
+.capsulefour img{
+    max-width: 15rem;
+    margin: 50px;
+}
+.card-servicios4:hover .capsulefour{
+  opacity: 60%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+}
+
+.capsulefive{
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+  right: 0%;
+  border-radius: 20px;
+  left: 0%;
+  cursor: pointer;
+  top: 0%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  bottom: 0%;
+  opacity: 0%;
+}
+.capsulefive img{
+    max-width: 15rem;
+    margin: 50px;
+}
+.card-servicios5:hover .capsulefive{
+  opacity: 60%;
+  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
 }
 
 .card_servicios p {
@@ -181,7 +385,9 @@ main {
   text-align: center;
 }
 
-
+.Iconfilter{
+  max-width: 100%;
+}
 .fotos-servicios {
   margin-top: 140px;
   display: flex;
@@ -191,6 +397,15 @@ main {
 }
 .servicios-photo2{
   margin-left: 45px;
+  position: relative;
+  overflow: hidden;
+}
+.servicios-photo2:hover .filtertwo{
+  top: 0%;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.servicios-photo1{
+  position: relative;
 }
 
 .photo1 {
@@ -198,23 +413,73 @@ main {
   object-fit: auto;
   object-position: center;
   width: 550px;
+  cursor: pointer;
   height: 600px;
   border-radius: 23px;
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+.servicios-photo1:hover .filterone{
+  left: 0%;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.photo1:hover {
+  transform: scale(1.2);
+  filter: blur(2px);
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
+.filterone{
+  background-color: #B6C4C7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  padding: 30px;
+  justify-items: center;
+  z-index: 1000;
+  right: 0%;
+  border-radius: 23px;
+  left: 100%;
+  cursor: pointer;
+  top: 0%;
+  bottom: 0%;
+  text-align: center;
+  opacity: 80%;
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.filtertwo{
+  background-color: #B6C4C7;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 30px;
+  cursor: pointer;
+  right: 0%;
+  left: 0%;
+  top: 100%;
+  bottom: 0%;
+  text-align: center;
+  border-radius: 23px;
+  opacity: 80%;
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
 .photo2 {
   aspect-ratio: 0.85;
   object-fit: auto;
   object-position: center;
   width: 483px;
   border-radius: 23px;
+  cursor: pointer;
   align-self: center;
   margin-top: 32px;
   max-width: 100%;
 }
 
 
-
+.servicios-photo1{
+  overflow: hidden;
+}
 
 
 
@@ -262,7 +527,7 @@ main {
   /* height: calc(400vh); */
   /* padding: 40px; */
   margin: auto;
-  height: calc(110vh);
+  height: calc(100%);
 
 }
 
@@ -270,15 +535,19 @@ main {
   /* margin-top: 30px; */
   color: white;
   font-size: 38px;
-  ;
+  text-align: center;
 }
 
 .container_informacion {
   align-items: center;
   /* justify-content: space-between; */
   display: flex;
+  max-width: 100%;
+  justify-content: space-between;
   margin-top: 45px;
   margin-left: 40px;
+  padding: auto;
+  padding-bottom: 60px;
 }
 
 .info_1 {
@@ -288,6 +557,7 @@ main {
 
 .column2info {
   margin-left: 90px;
+  
   width: 550px;
 }
 
@@ -312,6 +582,111 @@ main {
 .div-text2 {
   gap: 20px;
   display: flex;
+  
+}
+.div-textone{
+  max-width: 40%;
+  animation-name: despliegue;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 40%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
+}
+
+.div-texttwo{
+  max-width: 40%;
+  animation-name: despliegue;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 40%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
+}
+
+.div-textthree{
+  animation-name: despliegue;
+  animation-duration: 3.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 30%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
+}
+
+.div-textfour{
+  animation-name: despliegue;
+  animation-duration: 3.9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 30%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
+}
+  
+
+.div-textsix{
+  animation-name: despliegue;
+  animation-duration: 5.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 30%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
+}
+
+.div-textfive{
+  animation-name: despliegue;
+  animation-duration: 5.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes despliegue {
+  0%{
+    max-width: 30%;
+  }
+  100%{
+    max-width: 100%;
+  }
+  
 }
 
 .column-info {
@@ -343,6 +718,7 @@ main {
   /* margin-left: 20px; */
 }
 
+
 .uni {
   color: #CBD7CB;
   text-align: center;
@@ -370,12 +746,12 @@ main {
 
 .main4 {
   background-color: #B6C4C7;
-  height: calc(115vh);
+  max-width: 100%;
 
 }
 
 .contacto {
-  max-width: 1250px;
+  max-width: 100%;
   padding: 40px;
   margin: auto;
   margin-left: 50px;
@@ -394,6 +770,8 @@ main {
 
 .container_contacto {
   display: flex;
+  max-width: 100%;
+  justify-content: center;
 }
 
 .map iframe {
@@ -407,16 +785,18 @@ main {
 .colum1 {
   /* background-color: white; */
   height: 200px;
-  width: 700px;
+  width: 500px;
   display: flex;
   justify-items: center;
   margin-top: 40px;
   margin-left: 30px;
+  
 
 }
 
 .direcion {
   /* background-color: #af9ed8; */
+  width: 300px;
   margin-left: 30px;
   align-items: center;
   text-align: center;
@@ -459,6 +839,8 @@ main {
 
 .phone {
   /* margin-left: 30px; */
+  margin: auto;
+  margin-top: 40px;
   align-items: center;
   text-align: center;
 }
@@ -478,21 +860,343 @@ main {
   font-size: 20px;
   color: white;
 }
-
+.menu_icon{
+  display: none;
+}
 .logi {
   text-align: center;
   margin-top: 80px;
   margin-left: 10px;
   color: white;
 }
+.direccion-icon{
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.horario-icon{
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.phone-icon{
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.logi{
+  padding: 40px;
+}
+@keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1340px) {
+  .photo1{
+    max-width: 450px;
+  }
+  .servicios-Medicos{
+    margin: auto;
+    margin-right: -30px;
+    margin-left: -90px;
+  }
+  
 
 
-@media (max-width: 1024px) {
+}
+ 
+@media (max-width: 1320px) {
+  .container_contacto {
+    display: block;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main4{
+    max-width: 100%;
+    margin: auto;
+    
+  }
+  .map{
+    width: 100%;
+    margin: auto;
+  }
+  .map iframe {
+    border: none;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 18px;
+    margin-top: 35px;
+    width: 100%;
+  
+    height: 400px; 
+    
+    /* display: none; */
+  }
+  .contactos_dire{
+    margin: auto;
+    width: 100%;
+    margin: auto;
+  }
 
+  .colum1{
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .colum2{
+    margin: auto;
+    margin-top: 90px;
+  }
+
+
+}
+
+@media (max-width: 1259px) {
+  .container_informacion{
+    max-width: 100%;
+    margin: 0%;
+  }
+  .column-info1 .title{
+    width: 140px;
+    height: 145px;
+    align-items: center;
+    justify-content: center;
+   font-size: 18px;
+   padding: auto;
+   
+    text-align: center;
+    margin: 0%;
+    
+  }
+  .info_1{
+    width: 100%;
+  }
+
+  
+.column2info{
+  width: 100%;
+}
+  .column-info2{
+    width: 100%;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+   font-size: 18px;
+   padding: 30px;
+   margin-right: 30px;
+   
+    text-align: center;
+    margin: 0%;
+  }
+  .uni{
+    font-size: 15px;
+    width: 100%;
+    margin: auto;
+    padding: 2px;
+  }
+  
+
+  .uni1{
+    font-size: 15px;
+    width: 100%;
+    
+    margin: auto;
+    padding: 2px;
+    
+  }
+
+  .div-text3{
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 1124px) {
+  
+  .Servicios2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+   text-align: center;
+    margin: 0%;
+  }
+  .conter-servios{
+    margin: 0%;
+    max-width: 100%;
+  }
+  .servicios-Medicos{
+    width: 100%;
+    margin: 0%;
+    animation: moving;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    margin-left: 0%;
+    justify-content: space-between;
+  }
+  .photo-servicios{
+    display: flex;
+  }
+  .photo1{
+    max-width: 300px;
+    max-height: 400px;
+  }
+  .filterone{
+    max-width: 300px;
+    max-height: 400px;
+    top: 0%;
+    font-size: 10px;
+  }
+
+  .photo2{
+    max-width: 300px;
+    max-height: 400px;
+  }
+  .filtertwo{
+    max-width: 300px;
+    max-height: 400px;
+    
+    font-size: 10px;
+  }
+  .servicios1{
+    margin: auto;
+    width: 100%;
+    
+  }
+  .servicios2{
+    width: 100%;
+  }
+ 
+  .servicios3{
+    margin: auto;
+    width: 100%;
+    margin-right: 80px;
+  }
+  .card_sliderone{
+    animation-name: slider;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .card_slidertwo{
+    animation-name: slidertwo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .card_sliderthree{
+    animation-name: sliderthree;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .card-servicios{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+  }
+
+  .servicios-photo1{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    filter:drop-shadow(0 0 10px ) ;
+  }
+  .titleServices{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+  .servicios-photo2{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    filter:drop-shadow(0 0 10px ) ;
+  }
+
+  @keyframes moving {
+    from{
+      transform: translateY(0px);
+    }
+    to{
+      transform: translateY(30px);
+    }
+    
+  }
+
+ 
+    
+
+
+}
+
+
+
+
+@media (max-width: 1230px) {
+    .media_cover img{
+      max-width: 90%;
+      margin-right: -350px;
+    }
+    
+
+
+}
+
+
+
+
+@media (max-width: 800px) {
+  .menu {
+    height: 0px;
+    position: absolute;
+    right: 0px;
+    left: 0%;
+    top: 130px;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.5);
+    transition: all 300ms;
+  }
+  .menu_icon{
+    display: block;
+    position: relative;
+  }
+  .filterone:hover{
+    left: 0%;
+right: 30%;
+    
+  }
   .header__consulta,
   main {
     padding: 20px;
   }
+  
+  .servicios3{
+    justify-content: space-between;
+    width: 100%;
+    margin: 0%;
+    margin-left: -20px;
+  }
+ 
 
   #icon_menu {
 
@@ -502,22 +1206,16 @@ main {
     font-size: 35px;
     color: #E7CFCB;
   }
+  
 
   .header__consulta {
     display: none;
   }
-
-  .menu {
-    height: 0px;
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    overflow: hidden;
-    z-index: 10;
-    box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.5);
-    transition: all 300ms;
-  }
-
+ 
+ .BackDr{
+  z-index: -10;
+ }
+  
   .menu nav ul {
     padding: 20px 0px;
     flex-direction: column;
@@ -532,32 +1230,52 @@ main {
     height: 235px;
   }
 
+
+.text_informacion{
+  margin: auto;
+}
+
   .text_informacion h1 {
-    margin-top: -50px;
+    
     font-size: 32px;
+    z-index: 1000px;
     margin-left: -35px;
+    text-align: center;
+    
   }
 
   .text_informacion p {
     font-size: 20px;
     /* text-align: left; */
-    margin-left: -35px;
+    text-align: center;
     color: #B6C4C7;
   }
 
+  .cover{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .media_cover img{
+    margin: 20px;
+  }
   .media_cover {
-    display: none;
+    right: 0px;
+    left: 0px;
+    margin: auto;
   }
 
   .Text-cover {
     margin-top: 45px;
-    text-align: left;
+    text-align: justify;
     /* padding: 10px; */
 
   }
 
   .Text-cover h1 {
     font-size: 32px;
+    text-align: center;
   }
 
   .Text-cover p {
@@ -566,23 +1284,44 @@ main {
 
   .main2 {
     background-color: #E2D3AC;
-    height: calc(180vh);
+    background-attachment: fixed;
+    height: calc(100%);
+    margin: 0%;
+    
   }
 
 .conter-servios {
+    text-align: center;
     margin-top: 70px;
-    margin-left: -8px;
+    margin-left:0%;
+    max-width: 100%;
+    align-items: center;
+    align-content: center;
     
   }
 
   .servicios-Medicos{
+    margin: 0%;
     margin-top: 10px;
-    margin-left: 20px;
+    
+    width: 100%;
+    padding: 0%;
+    justify-content: center;
   
+  }
+  
+  .servicios1{
+    margin: auto;
+  }
+  .servicios3{
+    width: 100%;
+    margin: auto;
   }
 
    .Servicios2 {
+    margin: 0%;
     margin-top: 0px;
+    padding: 0%;
     background-color:transparent;
     border-radius: 0px;
     /* gap: -10px; */
@@ -590,32 +1329,44 @@ main {
     height: calc(0vh);
     
   }
+  .titleServices{
+    width: 100%;
+    align-items: center;
+    padding: auto;
+    text-align: center;
+  }
   
 
 
   .card_servicios {
   
     gap: 0px;
-    margin-top: 0px;
+   margin: auto;
     display: table;
     justify-content: center;
     text-align: center;
     width: 330px;
   }
-
+.Servicios2{
+  height: 100%;
+  margin: auto;
+}
   .Servicios {
+    margin: auto;
     display: table;
     justify-content: center;
+    text-align: center;
   }
 
   .Servicios h4 {
-    margin-top: -30px;
-    font-size: 25px;
+    width: 100%;
+    font-size: 29px;
+    text-align: center;
   }
 
   .Servicios p {
     font-size: 18px;
-    width: 380px;
+    width: 100%;
   }
 
   .card-servicios2,
@@ -635,142 +1386,80 @@ main {
     /* margin: -5px; */
   }
 
- 
+ .photo-servicios{
+  flex-direction: column;
+  margin: auto;
+  margin-top: 90px;
+ }
 
   .fotos-servicios {
-    display: none;
-  }
-
-
-  .formacion {
-    max-width: auto;
-     padding: 40px; 
-     margin: auto; 
-     height: calc(80vh); 
-
-  }
-
-  .main3{
-    margin-top: -30px;
-    /* display: none; */
+    margin-top: -20px;
+    display: flex;
     
-
   }
-
-  .text-formacion h4 {
-    /* margin-top: 30px; */
-    color: white;
-    font-size: 38px;
+  .servicios-photo2{
+    margin: 0%;
   }
+.container_informacion{
+  display:block;
+  
+}
+.info_1{
+  max-width: 100%;
+  margin: 0%;
+}
+.column2info{
+  margin: 0%;
+  margin-right: 0%;
+  width: 100%;
+  
+}
 
-  .container_informacion {
-    display: table;
-    justify-content: center;
-    /* text-align: center; */
-     /*  Este es para el medio de lka formacion*/
+.main3{
+  max-width: 100%;
+  max-height: 100%;
+}
 
-     background-color: aqua;
-     display: none;
-  }
+.column-info1 .title{
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  
+}
+.title{
+  max-width: 150px;
+  
+}
+.uni1{
+  font-size: 18px;
+}
 
-  .info_1{
-    /* width: -20px; */
-    /* margin-right: 10px; */
+ 
 
-  }
+  
 
-  .column2info {
-    margin-left: -20px;
-  }
 
-  .div-text {
-    border-radius: 105px;
-    box-shadow: 0px 2.874px 17.246px -0.719px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(14px);
-    background-color: white;
-    width: 340px;
-    max-height: 190px;
-    margin-top: 35px;
-  }
+  
 
-  .div-text3 {
-    border-radius: 105px;
-    box-shadow: 0px 2.874px 17.246px -0.719px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(14px);
-    background-color: white;
-    width: 343px;
-    max-height: 190px;
-    margin-top: 35px;
-    display: none;
-    /* margin-left: -20px; */
-  }
+  
 
-  .div-text2 {
-    gap: 20px;
-    display: flex;
-  }
 
-  .column-info {
-    display: table;
-    flex-direction: column;
-    line-height: normal;
-    width: auto;
-    /* margin-left: 0px; */
-  }
 
-  .title {
-    border-radius: 87px;
-    box-shadow: 0px 2.874px 17.246px -0.719px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(14.371501922607422px);
-    background-color: #cbd7cb;
-    flex-grow: 1;
-    color: #fff;
-    white-space: nowrap;
-    width: 100%;
-    padding: 50px 17px;
-    font: 200 18px Poppins, sans-serif;
-  }
 
-  .column-info2 {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 50%;
-    /* margin-left: 20px; */
-  }
+  
 
-  .uni {
-    color: #CBD7CB;
-    text-align: center;
-    align-self: stretch;
-    margin: auto;
-    margin-right: -30px;
-    width: 180px;
-    font: 500 16px Poppins, sans-serif;
-  }
+  
 
-  .uni p {
-    margin-left: -10px;
-  }
-
-  .uni1 {
-    color: #CBD7CB;
-    text-align: center;
-    align-self: stretch;
-    margin: auto;
-    /* margin-right: 40px; */
-    width: 180px;
-    font: 500 16px Poppins, sans-serif;
-  }
-
-  .uni1 p{
-    text-align: center;
-  }
+  
 
 
 
   .main4 {
     display: table;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
     height: calc(0vh);
 
   }
@@ -786,9 +1475,10 @@ main {
  .contacto {
   /* background-color: aqua; */
   /* max-width: 1000px; */
-  padding: 40px;
+  padding: 10px;
+  width: 100%;
   margin: auto;
-  margin-left: -10px;
+  
 }
 
 .text-contacto h4 {
@@ -800,49 +1490,92 @@ main {
 
 .text-contacto {
   margin-top: 20px;
+  text-align: center;
 }
 
 .container_contacto {
+  padding: 0%;
   display: table;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
-
+.map{
+  width: 100%;
+  background-color: transparent;
+  margin: 0%;
+}
 .map iframe {
   border: none;
+  margin: 0%;
+  padding: 0%;
   border-radius: 18px;
   margin-top: 35px;
-  width: 315px;
+  max-width: 100%;
   height: 400px; 
-  margin-left: -px;
+  
   /* display: none; */
 }
 
 .colum1 {
   /* background-color: white; */
   height: 200px;
-  width: 130%;
+  width: 100%;
   display: table;
   justify-items: center;
   margin-top: 40px;
-  margin-left: -60px;
+  
 
+}
+.contactos_dire{
+  margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 .direcion {
   /* background-color: #af9ed8; */
   /* margin-left: -180px; */
+  margin: auto;
   align-items: center;
   text-align: center;
+}
+
+.direccion-icon{
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.horario-icon{
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.phone-icon{
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
 }
 
 
 .horario {
   /* background-color: #8bd3dc; */
+  margin: auto;
   margin-top: 30px;
   align-items: center;
   text-align: center;
-  margin-left: 30px;
 
 }
 
@@ -856,19 +1589,87 @@ main {
 
 .colum2{
   display: table;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 100px;
+  
+}
+
+.logi{
+  padding: 40px;
 }
 
 
 
-
-
-  /* end del querry */
+  
 }
 
 
+@media (max-width: 550px) {
+  .column-info1 .title{
+    width: 120px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+   font-size: 18px;
+   padding: auto;
+   
+    text-align: center;
+    margin: 0%;
+    
+  }
+  .column-info2{
+    width: 120px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+   font-size: 18px;
+   padding: auto;
+   
+    text-align: center;
+    margin: 0%;
+  }
+  .uni{
+    font-size: 15px;
+    width: 100%;
+    
+    margin: auto;
+    padding: 2px;
+  }
+  .Nutri{
+    margin-left: 28px;
+    padding-right: 30px;
+  }
+  .pedi{
+    margin-left: 20px;
+  }
+  .uni1{
+    font-size: 15px;
+    width: 100%;
+    
+    margin: auto;
+    padding: 2px;
+    
+  }
+  .column-info2{
+    margin: 0%;
+    width: 100%;
+    margin-left: -10px;
+    
+  }
+  .container_informacion{
+    margin: 2%;
+  }
+  .div-text2{
+    height: 5%;
+    
+  }
 
+
+
+}
+
+
+/* end del querry */
 
 
 
