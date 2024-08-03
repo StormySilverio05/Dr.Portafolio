@@ -18,7 +18,7 @@ header {
   content: "";
   width: 20%;
   height: 10%;
-  background-color:green;
+  /* background-color:green; */
   position: absolute;
   left: 0%;
   right: 0%;
@@ -33,7 +33,7 @@ header {
   content: "";
   width: 20%;
   height: 10%;
-  background-color:blue;
+  /* background-color:blue; */
   position: absolute;
   left: 0%;
   right: 0%;
@@ -47,7 +47,7 @@ header {
   content: "";
   width: 20%;
   height: 10%;
-  background-color:red;
+  /* background-color:red; */
   position: absolute;
   left: 0%;
   right: 0%;
