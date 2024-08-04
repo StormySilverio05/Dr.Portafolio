@@ -959,6 +959,12 @@ cursor: pointer;
   .formacion{
     padding: 10px;
   }
+  .servicios-photo1{
+    margin-left: 40px;
+  }
+  .photo1{
+    width: 400px;
+  }
 
 }
 
