@@ -70,6 +70,7 @@ header {
   align-items: center;
 }
 
+
 .logo img {
   width: 90px;
 }
@@ -399,6 +400,11 @@ cursor: pointer;
 .servicios-photo2{
   margin-left: 45px;
   position: relative;
+  animation-name: moving;
+  animation-duration: 2.4s;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
   overflow: hidden;
 }
 .servicios-photo2:hover .filtertwo{
@@ -407,6 +413,11 @@ cursor: pointer;
 }
 .servicios-photo1{
   position: relative;
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 .photo1 {
@@ -533,6 +544,11 @@ cursor: pointer;
   /* padding: 40px; */
   margin: auto;
   height: calc(100%);
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 
 }
 
@@ -801,6 +817,25 @@ cursor: pointer;
     100%{
       transform: rotate(360deg);
     }
+}
+
+
+.servicios-Medicos{
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes moving {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(30px);
+  }
+  
 }
 
 @media (max-width: 1340px) {
