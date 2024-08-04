@@ -132,7 +132,7 @@ main {
     margin-bottom: 500px;
   }
   to{
-    margin-top: -200px;
+    margin-top: -100px;
   }
 }
 .BackDr{
@@ -192,7 +192,7 @@ main {
 .main2 {
   background-color: #CBD7CB;
   padding-bottom: 50px;
-  height: calc(100%);
+  height: calc(50%);
 }
 
 .conter-servios {
@@ -236,129 +236,7 @@ main {
   overflow: hidden;
 }
 
-.capsuleone{
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  right: 0%;
-  border-radius: 20px;
-  left: 0%;
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  bottom: 0%;
-  opacity: 0%;
-}
-.capsuleone img{
-    max-width: 15rem;
-    margin: 50px;
-}
-.card-servicios1:hover .capsuleone{
-  opacity: 60%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  cursor: pointer;
-}
-.capsuletwo{
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  right: 0%;
-  border-radius: 20px;
-  left: 0%;
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  bottom: 0%;
-  opacity: 0%;
-}
-.capsuletwo img{
-  max-width: 15rem;
-  margin: 50px;
-}
-.card-servicios2:hover .capsuletwo{
-opacity: 60%;
-transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-cursor: pointer;
-}
 
-.capsulethree{
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  right: 0%;
-  border-radius: 20px;
-  left: 0%;
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  bottom: 0%;
-  opacity: 0%;
-}
-.capsulethree img{
-    max-width: 15rem;
-    margin: 50px;
-}
-.card-servicios3:hover .capsulethree{
-  opacity: 60%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  cursor: pointer;
-}
-
-.capsulefour{
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  right: 0%;
-  border-radius: 20px;
-  left: 0%;
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  bottom: 0%;
-  opacity: 0%;
-}
-.capsulefour img{
-    max-width: 15rem;
-    margin: 50px;
-}
-.card-servicios4:hover .capsulefour{
-  opacity: 60%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  cursor: pointer;
-}
-
-.capsulefive{
-  position: absolute;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  opacity: 70%;
-  right: 0%;
-  border-radius: 20px;
-  left: 0%;
-  cursor: pointer;
-  top: 0%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  bottom: 0%;
-  opacity: 0%;
-}
-.capsulefive img{
-    max-width: 15rem;
-    margin: 50px;
-}
-.card-servicios5:hover .capsulefive{
-  opacity: 60%;
-  transition: all 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-  cursor: pointer;
-}
 
 .card_servicios p {
   color: #E2D3AC;
@@ -375,6 +253,7 @@ cursor: pointer;
   width: 250px;
   height: 200px;
   border-radius: 20px;
+  cursor: pointer;
   background: white;
   position: relative;
   padding: 1.8rem;
@@ -418,52 +297,14 @@ cursor: pointer;
   border-radius: 23px;
   transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
-.servicios-photo1:hover .filterone{
-  left: 0%;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
+
 .photo1:hover {
   transform: scale(1.2);
   filter: blur(2px);
   transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
-.filterone{
-  background-color: #B6C4C7;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  align-items: center;
-  padding: 30px;
-  justify-items: center;
-  z-index: 1000;
-  right: 0%;
-  border-radius: 23px;
-  left: 100%;
-  cursor: pointer;
-  top: 0%;
-  bottom: 0%;
-  text-align: center;
-  opacity: 80%;
-  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-.filtertwo{
-  background-color: #B6C4C7;
-  position: absolute;
-  max-width: 100%;
-  max-height: 100%;
-  padding: 30px;
-  cursor: pointer;
-  right: 0%;
-  left: 0%;
-  top: 100%;
-  bottom: 0%;
-  text-align: center;
-  border-radius: 23px;
-  opacity: 80%;
-  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
+
 .photo2 {
   aspect-ratio: 0.85;
   object-fit: auto;
@@ -472,13 +313,25 @@ cursor: pointer;
   border-radius: 23px;
   cursor: pointer;
   align-self: center;
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   margin-top: 32px;
   max-width: 100%;
+}
+.photo2:hover {
+  transform: scale(1.2);
+  filter: blur(2px);
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 
 .servicios-photo1{
   overflow: hidden;
+}
+.servicios-Medicos{
+  animation-name: moving;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 
@@ -546,7 +399,7 @@ cursor: pointer;
   justify-content: space-between;
   margin-top: 45px;
   margin-left: 40px;
-  padding: auto;
+  padding: 10px;
   padding-bottom: 60px;
 }
 
@@ -584,110 +437,17 @@ cursor: pointer;
   display: flex;
   
 }
-.div-textone{
-  max-width: 40%;
-  animation-name: despliegue;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 40%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
 
-.div-texttwo{
-  max-width: 40%;
-  animation-name: despliegue;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 40%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
 
-.div-textthree{
-  animation-name: despliegue;
-  animation-duration: 3.8s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 30%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
 
-.div-textfour{
-  animation-name: despliegue;
-  animation-duration: 3.9s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 30%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
+
+
   
 
-.div-textsix{
-  animation-name: despliegue;
-  animation-duration: 5.3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 30%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
 
-.div-textfive{
-  animation-name: despliegue;
-  animation-duration: 5.7s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes despliegue {
-  0%{
-    max-width: 30%;
-  }
-  100%{
-    max-width: 100%;
-  }
-  
-}
+
+
+
 
 .column-info {
   display: flex;
@@ -901,7 +661,8 @@ cursor: pointer;
 
 @media (max-width: 1340px) {
   .photo1{
-    max-width: 450px;
+    max-width: 390px;
+    margin-left: 100px;
   }
   .servicios-Medicos{
     margin: auto;
@@ -925,6 +686,7 @@ cursor: pointer;
     margin: auto;
     
   }
+  
   .map{
     width: 100%;
     margin: auto;
@@ -1045,29 +807,12 @@ cursor: pointer;
     justify-content: space-between;
   }
   .photo-servicios{
-    display: flex;
+    display: none;
   }
-  .photo1{
-    max-width: 300px;
-    max-height: 400px;
+  
   }
-  .filterone{
-    max-width: 300px;
-    max-height: 400px;
-    top: 0%;
-    font-size: 10px;
-  }
-
-  .photo2{
-    max-width: 300px;
-    max-height: 400px;
-  }
-  .filtertwo{
-    max-width: 300px;
-    max-height: 400px;
-    
-    font-size: 10px;
-  }
+  
+  
   .servicios1{
     margin: auto;
     width: 100%;
@@ -1082,24 +827,8 @@ cursor: pointer;
     width: 100%;
     margin-right: 80px;
   }
-  .card_sliderone{
-    animation-name: slider;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-  }
-  .card_slidertwo{
-    animation-name: slidertwo;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-  }
-  .card_sliderthree{
-    animation-name: sliderthree;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-  }
+  
+  
   .card-servicios{
     width: 100%;
     
@@ -1143,9 +872,6 @@ cursor: pointer;
 
  
     
-
-
-}
 
 
 
@@ -1233,6 +959,7 @@ right: 30%;
 
 .text_informacion{
   margin: auto;
+  margin-top: -100px;
 }
 
   .text_informacion h1 {
@@ -1257,13 +984,9 @@ right: 30%;
     flex-direction: column-reverse;
     
   }
-  .media_cover img{
-    margin: 20px;
-  }
+  
   .media_cover {
-    right: 0px;
-    left: 0px;
-    margin: auto;
+    display: none;
   }
 
   .Text-cover {
