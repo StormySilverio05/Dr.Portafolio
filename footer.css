@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
     justify-content: space-between; /* Espacio entre los elementos */
-    /* margin: 20px; */
+    
 }
 
 .box {
